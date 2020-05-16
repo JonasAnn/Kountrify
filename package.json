@@ -1,0 +1,28 @@
+{
+  "name": "countrify",
+  "version": "1.0.0",
+  "description": "Webapp to know you rcountry flag",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasAnn/Countrify.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "npm",
+    "yarn"
+  ],
+  "author": "Jonah Ifeoma <ifyajoke@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonasAnn/Countrify/issues"
+  },
+  "homepage": "https://github.com/JonasAnn/Countrify#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
