@@ -10,7 +10,38 @@ html {
 
 body {
   font-family: 'Dosis', sans-serif;
-  color: #000; }
+  color: #fff; }
+
+.form__box {
+  display: flex;
+  justify-content: space-between;
+  background-color: paleturquoise;
+  width: 100%;
+  padding: 2rem 5rem; }
+
+.form__search--box {
+  position: relative; }
+
+.form__input {
+  padding: 1rem 15rem 1rem 5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #858585;
+  color: #000;
+  transition: all .2s; }
+  .form__input::placeholder {
+    font-size: 1.5rem;
+    color: inherit; }
+  .form__input:focus {
+    outline: none;
+    background-color: #fafafa; }
+
+.form__icon {
+  position: absolute;
+  left: 1rem;
+  top: .8rem;
+  z-index: 10;
+  font-size: 1.5rem; }
 
 .header {
   background-color: #fff; }
