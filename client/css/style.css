@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Dosis', sans-serif;
+  color: #000; }
+
+.header {
+  background-color: #fff; }
+
+.navbar {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  padding: 1rem 3rem; }
+  .navbar__logo--box {
+    width: 4%;
+    height: auto; }
+  .navbar__logo {
+    width: 100%;
+    object-fit: cover; }
+  .navbar__mode--box {
+    padding: 1.5rem 0 0 0; }
+  .navbar__mode--link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.7rem; }

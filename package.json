@@ -4,7 +4,7 @@
   "description": "Webapp to know you rcountry flag",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass client/sass/main.scss client/css/style.css -w"
   },
   "repository": {
     "type": "git",
