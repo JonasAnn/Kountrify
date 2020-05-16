@@ -1,18 +1,18 @@
 .navbar{
-    height: 20vh;
+    height: 15vh;
     @include flexBetween;
     box-shadow: 0 8px 14px -8px rgba($color-black,0.75);
     width: 100%;
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
     &__logo--box{
-        width: 4%;
+        width: 5%;
         height: auto;
     }
     &__logo{
         @include imageRes;
     }
     &__mode--box{
-        padding: 1.5rem 0 0 0;
+        padding: 2rem 0 0 0;
     }
     &__mode--link{
         text-decoration: none;
