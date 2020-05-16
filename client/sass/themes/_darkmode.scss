@@ -1,0 +1,29 @@
+// toogle display
+.hide{
+    display: none;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+
+.bg--dark{
+   background-color: $color-blue-dark; 
+   & .navbar,
+   & .form__input,
+   & .form__dropdown--btn,
+   & .form__dropdown--link:link, 
+   & .form__dropdown--link:visited{
+       background-color: $color-blue-light;
+       color: $color-white;
+   }
+   & .form__icon{
+    color: $color-white;
+   }
+  & .form__dropdown--link{
+    &:hover,
+    &:active{
+        background-color: $color-blue-hover;
+        border-left: 2px solid $color-white;
+    }
+  }
+}

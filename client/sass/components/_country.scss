@@ -1,15 +1,15 @@
 .country{
     &__section{
-        padding: 7rem;
+        padding: 3rem;
         background-color: hotpink;
         width: 100%;
         @include flexBetween;
+        flex-wrap: wrap;
        
     }
+   &__box{
+    width: 22%;
+    margin-bottom: 3rem;
+} 
 }
-.g{
-    width: 30%;
-    background-color: indianred;
-    padding: 30px;
-    margin-right: 3rem;
-}
+

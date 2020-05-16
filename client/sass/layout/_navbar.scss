@@ -3,6 +3,7 @@
     @include flexBetween;
     box-shadow: 0 1px 14px -8px rgba($color-black,0.75);
     width: 100%;
+    color: $color-blue-extra;
     padding: 1rem 5rem;
     &__logo--box{
         width: 5%;
@@ -16,7 +17,10 @@
     }
     &__mode--link{
         text-decoration: none;
-        color: $color-black;
+        color: inherit;
         font-size: 1.7rem;
+    }
+    &__bg{
+        background-color: $color-white;
     }
 }
