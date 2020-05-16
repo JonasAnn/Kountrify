@@ -1,15 +1,21 @@
 .country{
     &__section{
         padding: 3rem;
-        background-color: hotpink;
         width: 100%;
         @include flexBetween;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
        
     }
    &__box{
     width: 22%;
     margin-bottom: 3rem;
-} 
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: .5rem;
+    background-color: $color-white;
+    color: $color-blue-extra;
+    box-shadow: 3px 8px 14px -8px rgba(0,0,0,0.75);
+    cursor: pointer;
+      }
 }
 

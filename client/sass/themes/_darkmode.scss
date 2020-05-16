@@ -12,7 +12,8 @@
    & .form__input,
    & .form__dropdown--btn,
    & .form__dropdown--link:link, 
-   & .form__dropdown--link:visited{
+   & .form__dropdown--link:visited,
+   & .country__box{
        background-color: $color-blue-light;
        color: $color-white;
    }
@@ -26,4 +27,5 @@
         border-left: 2px solid $color-white;
     }
   }
+
 }
