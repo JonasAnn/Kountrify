@@ -1,10 +1,12 @@
 .form{
     &__box{
         @include flexBetween;
-        background-color: paleturquoise;
+        // background-color: paleturquoise;
         width: 100%;
-        padding: 2rem 5rem;
+        padding: 4rem 5rem;
     }
+
+//Search bar design
     &__search--box{
         position: relative;
     }
@@ -30,5 +32,34 @@
         top: .8rem;
         z-index: 10;
         font-size: 1.5rem;
+    }
+}
+
+//Dropdown Design
+.form__dropdown{
+    &--box{
+        position: relative;
+    }
+    &--content{
+        position: absolute;
+        display: none;
+    }
+    &--link{
+        text-decoration: none;
+        display: block;
+        padding: 1.5rem 2.5rem;
+        background-color: $color-white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        &:last-child{
+            border-bottom-right-radius: 10px;
+        }
+    }
+    &--btn{
+        padding: 1.5rem 2.5rem; 
+        border: none;
+        background-color: $color-white;
+        border-top-left-radius: 10px;
+        margin-bottom: .2rem;
     }
 }

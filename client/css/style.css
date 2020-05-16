@@ -9,15 +9,30 @@ html {
   font-size: 62.5%; }
 
 body {
+  background-color: #fafafa; }
+
+body {
   font-family: 'Dosis', sans-serif;
   color: #fff; }
+
+.country__section {
+  padding: 7rem;
+  background-color: hotpink;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+
+.g {
+  width: 30%;
+  background-color: indianred;
+  padding: 30px;
+  margin-right: 3rem; }
 
 .form__box {
   display: flex;
   justify-content: space-between;
-  background-color: paleturquoise;
   width: 100%;
-  padding: 2rem 5rem; }
+  padding: 4rem 5rem; }
 
 .form__search--box {
   position: relative; }
@@ -43,6 +58,30 @@ body {
   z-index: 10;
   font-size: 1.5rem; }
 
+.form__dropdown--box {
+  position: relative; }
+
+.form__dropdown--content {
+  position: absolute;
+  display: none; }
+
+.form__dropdown--link {
+  text-decoration: none;
+  display: block;
+  padding: 1.5rem 2.5rem;
+  background-color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600; }
+  .form__dropdown--link:last-child {
+    border-bottom-right-radius: 10px; }
+
+.form__dropdown--btn {
+  padding: 1.5rem 2.5rem;
+  border: none;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  margin-bottom: .2rem; }
+
 .header {
   background-color: #fff; }
 
@@ -50,7 +89,7 @@ body {
   height: 15vh;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 1px 14px -8px rgba(0, 0, 0, 0.75);
   width: 100%;
   padding: 1rem 5rem; }
   .navbar__logo--box {
