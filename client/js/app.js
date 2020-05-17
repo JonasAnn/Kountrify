@@ -140,15 +140,15 @@ function countries(){
 
                   }   
                   if(e.target.parentElement.classList.contains('country__paragraph')){
-                    const imageDetails = e.target.parentElement.children[0]; 
-                    const header = e.target.parentElement.children[1];
+                    const imageDetails = e.target.parentElement.parentElement.children[0]; 
+                    const header = e.target.parentElement.parentElement.children[1];
 
                     //grab element to manipulate details
                     const deatailsImgBox = document.querySelector('.details--image').src = imageDetails.src;
                     const headerDetail = document.querySelector('.detail__header').textContent = header.textContent;
                  
                     for (i = 0; i < data.length; i++){
-                        if(e.target.parentElement.children[1].textContent.toLowerCase() == data[i].name.toLowerCase()){
+                        if(e.target.parentElement.parentElement.children[1].textContent.toLowerCase() == data[i].name.toLowerCase()){
                         document.querySelector('.first--item1').textContent = data[i].nativeName;
                         document.querySelector('.first--item2').textContent = data[i].population;
                         document.querySelector('.first--item3').textContent = data[i].region;
