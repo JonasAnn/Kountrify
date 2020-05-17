@@ -107,11 +107,9 @@ function filterResult(e){
     const inputValue = e.target.value.toLowerCase();
     document.querySelectorAll(".country__box").forEach((country) => {   
         const heading = country.children[1].textContent.toLowerCase();
-        heading == inputValue ? country.classList.remove('hide') 
+        heading.startsWith(inputValue) ? country.classList.remove('hide')
         : country.classList.add('hide');
     })
-    if(inputValue == ""){
-        countries();
-    }
+    
    console.log(inputValue);
 }
