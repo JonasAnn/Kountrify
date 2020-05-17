@@ -26,15 +26,20 @@ body {
     font-weight: 400; }
 
 .country__section {
-  padding: 3rem;
+  padding: 2rem;
+  width: 100%; }
+
+.country__holder {
   width: 100%;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  padding-right: 2rem; }
 
 .country__box {
   width: 22%;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  margin-left: 3.5rem;
   padding-bottom: 1.5rem;
   overflow: hidden;
   border-radius: .5rem;
@@ -66,7 +71,8 @@ body {
     color: inherit; }
   .form__input:focus {
     outline: none;
-    background-color: #fafafa; }
+    background-color: #858585;
+    color: #fafafa; }
 
 .form__icon {
   position: absolute;
@@ -85,7 +91,7 @@ body {
 .form__dropdown--link, .form__dropdown--link:link, .form__dropdown--link:visited {
   text-decoration: none;
   display: block;
-  padding: 1rem 4rem;
+  padding: 1rem 5.35rem;
   font-size: 1.3rem;
   transition: all .2s ease;
   background-color: #fff;
@@ -103,7 +109,7 @@ body {
   border: none;
   color: inherit;
   border-top-left-radius: 10px;
-  margin-bottom: .2rem;
+  margin-bottom: .4rem;
   background-color: #fff; }
   .form__dropdown--btn:focus {
     outline: none; }
@@ -136,6 +142,9 @@ body {
     background-color: #fff; }
 
 .hide {
+  display: none; }
+
+#hide {
   display: none; }
 
 .rotate {

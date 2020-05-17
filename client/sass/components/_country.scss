@@ -1,14 +1,20 @@
 .country{
     &__section{
-        padding: 3rem;
+        padding: 2rem;
         width: 100%;
-        @include flexBetween;
-        flex-flow: row wrap;
        
+    }
+    &__holder{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        padding-right: 2rem;
     }
    &__box{
     width: 22%;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    margin-left: 3.5rem;
     padding-bottom: 1.5rem;
     overflow: hidden;
     border-radius: .5rem;

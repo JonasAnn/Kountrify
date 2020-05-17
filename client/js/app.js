@@ -5,12 +5,14 @@ const dropDown = document.querySelector('.form__dropdown--content');
 const selectRegion = document.querySelector('.form__dropdown--btn');
 const darkMode = document.querySelector('.navbar__mode--link');
 const body = document.querySelector('body');
-const countrySection = document.querySelector('.country__section');
-
+const countryHolder = document.querySelector('.country__holder');
+const inputFilter = document.querySelector('.form__input');
 
 
 selectRegion.addEventListener('click', showDropdown);
 darkMode.addEventListener('click', switchMode);
+dropDown.addEventListener('click', filterRegion);
+inputFilter.addEventListener('keyup', filterResult);
 
 function showDropdown(e){
     //show and hide drop down
@@ -19,7 +21,6 @@ function showDropdown(e){
     //rotate span
     document.querySelector('.dropdown__icon').classList.toggle('rotate');
    
-   console.log(e.target)
 }
 
 
@@ -45,7 +46,7 @@ function countries(){
         for (i = 0; i < data.length; i++) {
             const countryDiv = document.createElement('div');
             countryDiv.className = 'country__box';
-            countrySection.appendChild(countryDiv);
+            countryHolder.appendChild(countryDiv);
             //create image or flag and append
             const flag = document.createElement('img');
             flag.src = data[i].flag;
@@ -80,9 +81,10 @@ function countries(){
             countryDiv.appendChild(callingCodes);
             //Region
             const region = document.createElement('p');
-            region.className = 'country__paragraph'
+            region.className = 'country__paragraph';
             pop = `Region: <span> ${data[i].region} </span>`;
             region.innerHTML = pop;
+            countryDiv.id = data[i].region.toLowerCase();
             countryDiv.appendChild(region);
           }
          
@@ -90,3 +92,26 @@ function countries(){
 }
 countries();
   
+function filterRegion(e){
+    const target = e.target.textContent.toLowerCase();
+
+    document.querySelectorAll(".country__box").forEach((country) => {    
+        country.id === target ? country.classList.remove('hide') 
+        : country.classList.add('hide');
+        console.log( country.id);
+    })
+
+}
+
+function filterResult(e){
+    const inputValue = e.target.value.toLowerCase();
+    document.querySelectorAll(".country__box").forEach((country) => {   
+        const heading = country.children[1].textContent.toLowerCase();
+        heading == inputValue ? country.classList.remove('hide') 
+        : country.classList.add('hide');
+    })
+    if(inputValue == ""){
+        countries();
+    }
+   console.log(inputValue);
+}
