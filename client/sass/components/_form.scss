@@ -4,9 +4,9 @@
         color: inherit;
         width: 100%;
         padding: 4rem 5rem;
-
         @include respond(phone){
             padding: 4rem 2rem;
+            flex-direction: column;
         }
     }
 
@@ -20,10 +20,10 @@
     border-radius: .5rem;
     border: none;
     color: inherit;
-    transition: all .2s;
+    transition: all .1s;
     background-color: $color-white;
     @include respond(phone){
-        padding: 1rem 5rem 1rem 5rem;
+        margin-bottom: 2.5rem;
     }
     &::placeholder{
         font-size: 1.5rem;
@@ -37,8 +37,8 @@
     }
     &__icon{
         position: absolute;
-        left: 1rem;
-        top: .8rem;
+        left: 1.2rem;
+        top: 1rem;
         z-index: 10;
         font-size: 1.5rem;
     }
@@ -64,13 +64,13 @@
         transition: all .2s ease;
         background-color: $color-white;
         color: inherit;
-        border-left: 2px solid transparent;
+        border-left: .2rem solid transparent;
         @include respond(phone){
-            padding: 1rem 5rem;
+            padding: 1rem 6rem;
             font-size: 1.7rem;
         }
         &:last-child{
-            border-bottom-right-radius: 10px;
+            border-bottom-right-radius: .2rem;
             
         }
     }
@@ -90,9 +90,6 @@
         &:focus{
             outline: none;
         }
-        @include respond(phone){
-            padding: 1rem 2rem;
-            font-size: 1.5rem;
-        }
+       
     }
 }

@@ -7,7 +7,9 @@ body{
 .country__heading{
     padding: 1.5rem 0 1.5rem 2rem;
     font-size: 2rem;
-
+    @include respond(phone){
+        font-size: 3rem;
+    }
 }
 
 .country__paragraph{
@@ -15,7 +17,9 @@ body{
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: .5rem;
- 
+    @include respond(phone){
+        font-size: 2rem;
+    }
     span{
         font-weight: 400;
     }

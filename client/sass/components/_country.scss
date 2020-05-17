@@ -10,6 +10,11 @@
         display: flex;
         flex-flow: row wrap;
         padding-right: 2rem;
+        @include respond(phone){
+            flex-direction: column;
+            width: 80%;
+            padding-right: 0;
+        }
     }
    &__box{
     width: 22%;
@@ -22,9 +27,17 @@
     color: $color-blue-extra;
     box-shadow: 3px 8px 14px -8px rgba(0,0,0,0.75);
     cursor: pointer;
-    @include respond(phone){
+    @include respond(tab-land){
+        width: 30%;
+    }
+    @include respond(tab-port){
         width: 45%;
-        margin-left: 2.2rem;
+    }
+    @include respond(phone){
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 4rem;
+        padding-bottom: 3rem;
     }
       }
     &__details{
@@ -38,9 +51,13 @@
             width: 80%;
             margin: auto;
             margin-top: 7rem;
+            @include respond(tab-port){
+                flex-direction: column;
+                width: 100%;
+            }
             @include respond(phone){
                 flex-direction: column;
-                width: 90%;
+                width: 100%;
             }
         }
     }
@@ -49,15 +66,23 @@
 .details{
     &--imagebox{
         width: 45%;
+        @include respond(tab-port){
+            width: 100%;
+            margin-bottom: 4rem;
+        }
         @include respond(phone){
             width: 100%;
             margin-bottom: 4rem;
         }
+       
     }
     &--text{
         width: 45%;
         position: relative;
     color: $color-blue-extra;
+    @include respond(tab-port){
+        width: 100%;
+    }
     @include respond(phone){
         width: 100%
     }
@@ -75,6 +100,9 @@
     display: inline-block;
     width: 45%;
     list-style: none;
+    @include respond(phone){
+        width: 100%;
+    }
     }
     &--item{
         padding: .6rem 0;
@@ -88,6 +116,11 @@
     position: absolute;
     right: 0;
     list-style: none;
+    @include respond(phone){
+        width: 100%;
+       position: relative;
+       margin-top: 1.5rem;
+    }
     }
     &--item{
         padding: .6rem 0;
@@ -105,19 +138,30 @@
         padding: .6rem 0;
         letter-spacing: .4px;
         margin-top: 1rem;
-        @include respond(phone){
+        @include respond(tab-port){
             margin-top: 2rem;
+        }
+        @include respond(phone){
+            margin-top: 1.5rem;
         }
         span{
             box-shadow: 1px 2px 10px -8px rgba(0,0,0,0.75);
             padding: .6rem 2rem;
             font-size: 1.5rem;
             border: none;
-            border-radius: 3px;
+            border-radius: .3rem;
             background-color: $color-white;
             color: $color-blue-extra; 
             margin-left: 2.5rem;
-
+            @include respond(tab-port){
+                margin-left: 3rem;
+                padding: .6rem 4rem;
+            }
+            @include respond(phone){
+                margin-left: .2rem;
+                padding: .6rem 1rem;
+                
+            }
         
         }
     }

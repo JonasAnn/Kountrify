@@ -16,7 +16,7 @@
         @media only screen and (max-width: 56.25em) { @content };     //900px
     }
     @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em) { @content };    //1200px
+        @media only screen and (max-width: 81.25em) { @content };    //1300px
     }
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 112.5em) { @content };    //1800
