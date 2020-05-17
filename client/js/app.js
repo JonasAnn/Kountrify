@@ -96,50 +96,79 @@ function countries(){
                   countryHolder.classList.add('hide');
                   pageNav.classList.add('hide');
                   countryDetails.classList.remove('hide');
-                  console.log(e.target.parentElement);
+                 
 
-                  //create the ul elements for the details box
-                  const firstList = document.createElement('ul');
-                  firstList.className = 'first--list';
+                document.querySelector('.country__back--btn').addEventListener('click', function(e){
+                    countryHolder.classList.remove('hide');
+                    pageNav.classList.remove('hide');
+                    countryDetails.classList.add('hide');
+                    console.log('back');
+                    dropDown.classList.add('hide');
+                })
 
-                  const secondList = document.createElement('ul');
-                  secondList.className = 'second--list';
-
-                
                   if(e.target.parentElement.classList.contains('country__box')){
-                      
-                      const imageDetails = e.target.parentElement.children[0]; 
-                      const header = e.target.parentElement.children[1];
-                        // header.style.margin-bottom = '2rem';
-                      imageDetails.style.height = 'auto' 
-                    document.querySelector('.details--imagebox').appendChild(imageDetails);
-                    const textBox = document.querySelector('.details--text');
-                    textBox.appendChild(header);
+                        
+                    
+                    const imageDetails = e.target.parentElement.children[0]; 
+                    const header = e.target.parentElement.children[1];
 
-                    textBox.appendChild(firstList);
-                  }    
-                    for (let j = 0; j < 5; j++) {
-                       const firstItem = document.createElement('li');
-                       firstItem.className = 'second--item';
-                      
-                       console.log(e.target);
+                    //grab element to manipulate details
+                    const deatailsImgBox = document.querySelector('.details--image').src = imageDetails.src;
+                    const headerDetail = document.querySelector('.detail__header').textContent = header.textContent;
+                 
+                    for (i = 0; i < data.length; i++){
+                        if(e.target.parentElement.children[1].textContent.toLowerCase() == data[i].name.toLowerCase()){
+                        document.querySelector('.first--item1').textContent = data[i].nativeName;
+                        document.querySelector('.first--item2').textContent = data[i].population;
+                        document.querySelector('.first--item3').textContent = data[i].region;
+                        document.querySelector('.first--item4').textContent = data[i].area;
 
-                       for (i = 0; i < data.length; i++){
+                        document.querySelector('.second--item1').textContent = data[i].capital;
+                        document.querySelector('.second--item2').textContent = data[i].callingCodes;
+                        document.querySelector('.second--item3').textContent = data[i].numericCode;
+                        document.querySelector('.second--item4').textContent = data[i].subregion;
+                        
+                        document.querySelector('.third--item-code').textContent = data[i].currencies[0].code;
+                        document.querySelector('.third--item-name').textContent = data[i].currencies[0].name;
+                        document.querySelector('.third--item-symbol').textContent = data[i].currencies[0].symbol;
 
-                    //        if(e.target.parentElement.children[1].textContent == data[i].name){
-                    //    let firstText = `Native Name: <span> ${data[i].nativeName} </span>`;
-                    //    firstItem[j].innerHTML = firstText;
-                    //     console.log(firstItem)
-                    // };
-                       }
-
-                       firstList.appendChild(firstItem);
+                        document.querySelector('.third--item-long').textContent = data[i].latlng[0];
+                        document.querySelector('.third--item-lat').textContent = data[i].latlng[1];
 
                     }
-                    
-                    
-                    
-                  
+                 }   
+
+                  }   
+                  if(e.target.parentElement.classList.contains('country__paragraph')){
+                    const imageDetails = e.target.parentElement.children[0]; 
+                    const header = e.target.parentElement.children[1];
+
+                    //grab element to manipulate details
+                    const deatailsImgBox = document.querySelector('.details--image').src = imageDetails.src;
+                    const headerDetail = document.querySelector('.detail__header').textContent = header.textContent;
+                 
+                    for (i = 0; i < data.length; i++){
+                        if(e.target.parentElement.children[1].textContent.toLowerCase() == data[i].name.toLowerCase()){
+                        document.querySelector('.first--item1').textContent = data[i].nativeName;
+                        document.querySelector('.first--item2').textContent = data[i].population;
+                        document.querySelector('.first--item3').textContent = data[i].region;
+                        document.querySelector('.first--item4').textContent = data[i].area;
+
+                        document.querySelector('.second--item1').textContent = data[i].capital;
+                        document.querySelector('.second--item2').textContent = data[i].callingCodes;
+                        document.querySelector('.second--item3').textContent = data[i].numericCode;
+                        document.querySelector('.second--item4').textContent = data[i].subregion;
+                        
+                        document.querySelector('.third--item-code').textContent = data[i].currencies[0].code;
+                        document.querySelector('.third--item-name').textContent = data[i].currencies[0].name;
+                        document.querySelector('.third--item-symbol').textContent = data[i].currencies[0].symbol;
+
+                        document.querySelector('.third--item-long').textContent = data[i].latlng[0];
+                        document.querySelector('.third--item-lat').textContent = data[i].latlng[1];
+
+                    }
+                 }   
+                  }
                
               }
           });

@@ -25,15 +25,27 @@ body {
   .country__paragraph span {
     font-weight: 400; }
 
+.detail__header {
+  padding-left: 0; }
+
 .country__back--btn {
-  box-shadow: 3px 8px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0.3rem 0.8rem 1.4rem -0.8rem rgba(0, 0, 0, 0.75);
   padding: 1rem 2.5rem;
   font-size: 1.5rem;
   border: none;
   border-radius: 5px;
   font-weight: 700;
   background-color: #fff;
-  color: #111517; }
+  color: #111517;
+  cursor: pointer;
+  transition: all .2s; }
+  .country__back--btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0.4rem 1rem 1.4rem -0.8rem rgba(0, 0, 0, 0.75); }
+  .country__back--btn:active, .country__back--btn:focus {
+    outline: none;
+    box-shadow: 0.2rem 0.5rem 1.4rem -0.8rem rgba(0, 0, 0, 0.75);
+    transform: translateY(0); }
 
 .country__section {
   padding: 2rem;
@@ -68,24 +80,57 @@ body {
     margin-top: 7rem; }
 
 .details--imagebox {
-  width: 40%; }
+  width: 45%; }
 
 .details--text {
-  width: 40%;
+  width: 45%;
   position: relative;
   color: #111517; }
 
+.details--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
 .first--list {
   display: inline-block;
-  width: 35%;
+  width: 45%;
   list-style: none; }
+
+.first--item {
+  padding: .6rem 0;
+  letter-spacing: .4px; }
 
 .second--list {
   display: inline-block;
-  width: 35%;
+  width: 45%;
   position: absolute;
   right: 0;
   list-style: none; }
+
+.second--item {
+  padding: .6rem 0;
+  letter-spacing: .4px; }
+
+.third--list {
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+  margin-top: 1rem; }
+
+.third--item {
+  padding: .6rem 0;
+  letter-spacing: .4px;
+  margin-top: 1rem; }
+  .third--item span {
+    box-shadow: 1px 2px 10px -8px rgba(0, 0, 0, 0.75);
+    padding: .6rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #111517;
+    margin-left: 2.5rem; }
 
 .form__box {
   display: flex;
@@ -197,7 +242,8 @@ body {
   .bg--dark .form__dropdown--link:link,
   .bg--dark .form__dropdown--link:visited,
   .bg--dark .country__box,
-  .bg--dark .country__back--btn {
+  .bg--dark .country__back--btn,
+  .bg--dark .third--item span {
     background-color: #2b3945;
     color: #fff; }
   .bg--dark .form__icon,

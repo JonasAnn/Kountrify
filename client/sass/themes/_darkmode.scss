@@ -18,7 +18,8 @@
    & .form__dropdown--link:link, 
    & .form__dropdown--link:visited,
    & .country__box,
-   & .country__back--btn{
+   & .country__back--btn,
+   & .third--item span{
        background-color: $color-blue-light;
        color: $color-white;
    }
