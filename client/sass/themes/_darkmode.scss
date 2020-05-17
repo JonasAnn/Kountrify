@@ -17,11 +17,13 @@
    & .form__dropdown--btn,
    & .form__dropdown--link:link, 
    & .form__dropdown--link:visited,
-   & .country__box{
+   & .country__box,
+   & .country__back--btn{
        background-color: $color-blue-light;
        color: $color-white;
    }
-   & .form__icon{
+   & .form__icon,
+   & .details--text{
     color: $color-white;
    }
   & .form__dropdown--link{

@@ -23,5 +23,36 @@
     box-shadow: 3px 8px 14px -8px rgba(0,0,0,0.75);
     cursor: pointer;
       }
+    &__details{
+        padding: 1rem 5rem;
+        &--holder{
+            @include flexBetween;
+            width: 80%;
+            margin: auto;
+            margin-top: 7rem;
+        }
+    }
 }
 
+.details{
+    &--imagebox{
+        width: 40%;
+    }
+    &--text{
+        width: 40%;
+        position: relative;
+    color: $color-blue-extra;
+    }
+}
+.first--list{
+    display: inline-block;
+    width: 35%;
+    list-style: none;
+}
+.second--list{
+    display: inline-block;
+    width: 35%;
+    position: absolute;
+    right: 0;
+    list-style: none;
+}

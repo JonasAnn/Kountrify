@@ -6,13 +6,15 @@ const selectRegion = document.querySelector('.form__dropdown--btn');
 const darkMode = document.querySelector('.navbar__mode--link');
 const body = document.querySelector('body');
 const countryHolder = document.querySelector('.country__holder');
+const countryDetails = document.querySelector('.country__details');
 const inputFilter = document.querySelector('.form__input');
-
+const pageNav = document.querySelector('.form__box');
 
 selectRegion.addEventListener('click', showDropdown);
 darkMode.addEventListener('click', switchMode);
 dropDown.addEventListener('click', filterRegion);
 inputFilter.addEventListener('keyup', filterResult);
+
 
 function showDropdown(e){
     //show and hide drop down
@@ -64,7 +66,7 @@ function countries(){
             //population
             const population = document.createElement('p');
             population.className = 'country__paragraph'
-            pop = `Population: <span> ${data[i].population} </span>`;
+            let pop = `Population: <span> ${data[i].population} </span>`;
             population.innerHTML = pop;
             countryDiv.appendChild(population);
             //capital
@@ -87,9 +89,64 @@ function countries(){
             countryDiv.id = data[i].region.toLowerCase();
             countryDiv.appendChild(region);
           }
-         
+
+          const countryBoxes = document.querySelectorAll(".country__box").forEach(box => {
+              box.addEventListener('click', detailBox);
+              function detailBox(e){
+                  countryHolder.classList.add('hide');
+                  pageNav.classList.add('hide');
+                  countryDetails.classList.remove('hide');
+                  console.log(e.target.parentElement);
+
+                  //create the ul elements for the details box
+                  const firstList = document.createElement('ul');
+                  firstList.className = 'first--list';
+
+                  const secondList = document.createElement('ul');
+                  secondList.className = 'second--list';
+
+                
+                  if(e.target.parentElement.classList.contains('country__box')){
+                      
+                      const imageDetails = e.target.parentElement.children[0]; 
+                      const header = e.target.parentElement.children[1];
+                        // header.style.margin-bottom = '2rem';
+                      imageDetails.style.height = 'auto' 
+                    document.querySelector('.details--imagebox').appendChild(imageDetails);
+                    const textBox = document.querySelector('.details--text');
+                    textBox.appendChild(header);
+
+                    textBox.appendChild(firstList);
+                  }    
+                    for (let j = 0; j < 5; j++) {
+                       const firstItem = document.createElement('li');
+                       firstItem.className = 'second--item';
+                      
+                       console.log(e.target);
+
+                       for (i = 0; i < data.length; i++){
+
+                    //        if(e.target.parentElement.children[1].textContent == data[i].name){
+                    //    let firstText = `Native Name: <span> ${data[i].nativeName} </span>`;
+                    //    firstItem[j].innerHTML = firstText;
+                    //     console.log(firstItem)
+                    // };
+                       }
+
+                       firstList.appendChild(firstItem);
+
+                    }
+                    
+                    
+                    
+                  
+               
+              }
+          });
     })
+   
 }
+
 countries();
   
 function filterRegion(e){

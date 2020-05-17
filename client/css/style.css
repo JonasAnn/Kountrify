@@ -25,6 +25,16 @@ body {
   .country__paragraph span {
     font-weight: 400; }
 
+.country__back--btn {
+  box-shadow: 3px 8px 14px -8px rgba(0, 0, 0, 0.75);
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: #fff;
+  color: #111517; }
+
 .country__section {
   padding: 2rem;
   width: 100%; }
@@ -47,6 +57,35 @@ body {
   color: #111517;
   box-shadow: 3px 8px 14px -8px rgba(0, 0, 0, 0.75);
   cursor: pointer; }
+
+.country__details {
+  padding: 1rem 5rem; }
+  .country__details--holder {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 7rem; }
+
+.details--imagebox {
+  width: 40%; }
+
+.details--text {
+  width: 40%;
+  position: relative;
+  color: #111517; }
+
+.first--list {
+  display: inline-block;
+  width: 35%;
+  list-style: none; }
+
+.second--list {
+  display: inline-block;
+  width: 35%;
+  position: absolute;
+  right: 0;
+  list-style: none; }
 
 .form__box {
   display: flex;
@@ -91,7 +130,7 @@ body {
 .form__dropdown--link, .form__dropdown--link:link, .form__dropdown--link:visited {
   text-decoration: none;
   display: block;
-  padding: 1rem 5.35rem;
+  padding: 1rem 5.4rem;
   font-size: 1.3rem;
   transition: all .2s ease;
   background-color: #fff;
@@ -105,11 +144,11 @@ body {
   border-left: 2px solid #000; }
 
 .form__dropdown--btn {
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 2.4rem;
   border: none;
   color: inherit;
   border-top-left-radius: 10px;
-  margin-bottom: .4rem;
+  margin-bottom: .25rem;
   background-color: #fff; }
   .form__dropdown--btn:focus {
     outline: none; }
@@ -157,10 +196,12 @@ body {
   .bg--dark .form__dropdown--btn,
   .bg--dark .form__dropdown--link:link,
   .bg--dark .form__dropdown--link:visited,
-  .bg--dark .country__box {
+  .bg--dark .country__box,
+  .bg--dark .country__back--btn {
     background-color: #2b3945;
     color: #fff; }
-  .bg--dark .form__icon {
+  .bg--dark .form__icon,
+  .bg--dark .details--text {
     color: #fff; }
   .bg--dark .form__dropdown--link:hover, .bg--dark .form__dropdown--link:active {
     background-color: #072a4b;

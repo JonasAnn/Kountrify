@@ -52,7 +52,7 @@
        &:visited {
         text-decoration: none;
         display: block;
-        padding: 1rem 5.35rem;
+        padding: 1rem 5.4rem;
         font-size: 1.3rem;
         transition: all .2s ease;
         background-color: $color-white;
@@ -69,11 +69,11 @@
     }
 }
     &--btn{
-        padding: 1.5rem 2.5rem; 
+        padding: 1.5rem 2.4rem; 
         border: none;
         color: inherit;
         border-top-left-radius: 10px;
-        margin-bottom: .4rem;
+        margin-bottom: .25rem;
         background-color: $color-white;
         &:focus{
             outline: none;
