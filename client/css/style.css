@@ -7,6 +7,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
@@ -69,23 +78,41 @@ body {
   color: #111517;
   box-shadow: 3px 8px 14px -8px rgba(0, 0, 0, 0.75);
   cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .country__box {
+      width: 45%;
+      margin-left: 2.2rem; } }
 
 .country__details {
   padding: 1rem 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .country__details {
+      padding: 1rem 2rem; } }
   .country__details--holder {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: auto;
     margin-top: 7rem; }
+    @media only screen and (max-width: 37.5em) {
+      .country__details--holder {
+        flex-direction: column;
+        width: 90%; } }
 
 .details--imagebox {
   width: 45%; }
+  @media only screen and (max-width: 37.5em) {
+    .details--imagebox {
+      width: 100%;
+      margin-bottom: 4rem; } }
 
 .details--text {
   width: 45%;
   position: relative;
   color: #111517; }
+  @media only screen and (max-width: 37.5em) {
+    .details--text {
+      width: 100%; } }
 
 .details--image {
   width: 100%;
@@ -122,6 +149,9 @@ body {
   padding: .6rem 0;
   letter-spacing: .4px;
   margin-top: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .third--item {
+      margin-top: 2rem; } }
   .third--item span {
     box-shadow: 1px 2px 10px -8px rgba(0, 0, 0, 0.75);
     padding: .6rem 2rem;
@@ -138,6 +168,9 @@ body {
   color: inherit;
   width: 100%;
   padding: 4rem 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .form__box {
+      padding: 4rem 2rem; } }
 
 .form__search--box {
   position: relative;
@@ -145,11 +178,14 @@ body {
 
 .form__input {
   padding: 1rem 15rem 1rem 5rem;
-  border-radius: 5px;
+  border-radius: .5rem;
   border: none;
   color: inherit;
   transition: all .2s;
   background-color: #fff; }
+  @media only screen and (max-width: 37.5em) {
+    .form__input {
+      padding: 1rem 5rem 1rem 5rem; } }
   .form__input::placeholder {
     font-size: 1.5rem;
     color: inherit; }
@@ -181,6 +217,10 @@ body {
   background-color: #fff;
   color: inherit;
   border-left: 2px solid transparent; }
+  @media only screen and (max-width: 37.5em) {
+    .form__dropdown--link, .form__dropdown--link:link, .form__dropdown--link:visited {
+      padding: 1rem 5rem;
+      font-size: 1.7rem; } }
   .form__dropdown--link:last-child, .form__dropdown--link:link:last-child, .form__dropdown--link:visited:last-child {
     border-bottom-right-radius: 10px; }
 
@@ -197,6 +237,10 @@ body {
   background-color: #fff; }
   .form__dropdown--btn:focus {
     outline: none; }
+  @media only screen and (max-width: 37.5em) {
+    .form__dropdown--btn {
+      padding: 1rem 2rem;
+      font-size: 1.5rem; } }
 
 .header {
   background-color: #fff; }
@@ -209,9 +253,16 @@ body {
   width: 100%;
   color: #111517;
   padding: 1rem 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .navbar {
+      height: 20vh;
+      padding: 2rem 2rem; } }
   .navbar__logo--box {
     width: 5%;
     height: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .navbar__logo--box {
+        width: 12%; } }
   .navbar__logo {
     width: 100%;
     object-fit: cover; }

@@ -5,9 +5,16 @@
     width: 100%;
     color: $color-blue-extra;
     padding: 1rem 5rem;
+    @include respond(phone){
+        height: 20vh;
+        padding: 2rem 2rem;
+    }
     &__logo--box{
         width: 5%;
         height: auto;
+        @include respond(phone){
+            width: 12%;
+        }
     }
     &__logo{
         @include imageRes;

@@ -4,6 +4,10 @@
         color: inherit;
         width: 100%;
         padding: 4rem 5rem;
+
+        @include respond(phone){
+            padding: 4rem 2rem;
+        }
     }
 
 //Search bar design
@@ -13,11 +17,14 @@
     }
     &__input{
     padding: 1rem 15rem 1rem 5rem;
-    border-radius: 5px;
+    border-radius: .5rem;
     border: none;
     color: inherit;
     transition: all .2s;
     background-color: $color-white;
+    @include respond(phone){
+        padding: 1rem 5rem 1rem 5rem;
+    }
     &::placeholder{
         font-size: 1.5rem;
         color: inherit;
@@ -58,8 +65,13 @@
         background-color: $color-white;
         color: inherit;
         border-left: 2px solid transparent;
+        @include respond(phone){
+            padding: 1rem 5rem;
+            font-size: 1.7rem;
+        }
         &:last-child{
             border-bottom-right-radius: 10px;
+            
         }
     }
     &:hover,
@@ -77,6 +89,10 @@
         background-color: $color-white;
         &:focus{
             outline: none;
+        }
+        @include respond(phone){
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
         }
     }
 }
