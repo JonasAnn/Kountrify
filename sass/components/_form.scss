@@ -1,0 +1,95 @@
+.form{
+    &__box{
+        @include flexBetween;
+        color: inherit;
+        width: 100%;
+        padding: 4rem 5rem;
+        @include respond(phone){
+            padding: 4rem 2rem;
+            flex-direction: column;
+        }
+    }
+
+//Search bar design
+    &__search--box{
+        position: relative;
+        color: $color-blue-extra;
+    }
+    &__input{
+    padding: 1rem 15rem 1rem 5rem;
+    border-radius: .5rem;
+    border: none;
+    color: inherit;
+    transition: all .1s;
+    background-color: $color-white;
+    @include respond(phone){
+        margin-bottom: 2.5rem;
+    }
+    &::placeholder{
+        font-size: 1.5rem;
+        color: inherit;
+    }
+    &:focus{
+        outline: none;
+        background-color: $color-gray-dark;
+        color: $color-gray-light;
+    }
+    }
+    &__icon{
+        position: absolute;
+        left: 1.2rem;
+        top: 1rem;
+        z-index: 10;
+        font-size: 1.5rem;
+    }
+}
+
+//Dropdown Design
+.form__dropdown{
+    &--box{
+        position: relative;
+        font-weight: 700;
+    }
+    &--content{
+        position: absolute;
+    }
+    &--link{
+       &, 
+       &:link,
+       &:visited {
+        text-decoration: none;
+        display: block;
+        padding: 1rem 5.4rem;
+        font-size: 1.3rem;
+        transition: all .2s ease;
+        background-color: $color-white;
+        color: inherit;
+        border-left: .2rem solid transparent;
+        @include respond(phone){
+            padding: 1rem 6rem;
+            font-size: 1.7rem;
+        }
+        &:last-child{
+            border-bottom-right-radius: .2rem;
+            
+        }
+    }
+    &:hover,
+    &:active{
+        background-color: $color-gray-light;
+        border-left: 2px solid $color-black;
+    }
+}
+    &--btn{
+        padding: 1.5rem 2.4rem; 
+        border: none;
+        color: inherit;
+        border-top-left-radius: 10px;
+        margin-bottom: .25rem;
+        background-color: $color-white;
+        &:focus{
+            outline: none;
+        }
+       
+    }
+}

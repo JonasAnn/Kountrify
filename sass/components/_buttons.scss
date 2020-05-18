@@ -1,0 +1,22 @@
+.country__back--btn{
+    box-shadow: .3rem .8rem 1.4rem -.8rem rgba(0,0,0,0.75);
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: $color-white;
+    color: $color-blue-extra;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover{
+        transform: translateY(-.3rem);
+        box-shadow: .4rem 1rem 1.4rem -.8rem rgba(0,0,0,0.75);
+    }
+    &:active,
+    &:focus{
+        outline: none;
+        box-shadow: .2rem .5rem 1.4rem -.8rem rgba(0,0,0,0.75);
+        transform: translateY(0);
+    }
+}

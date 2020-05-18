@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css"> 
+  <link rel="shortcut icon" type="image/png" href="./css/images/logo.png"> 
+  <title>Countrify</title> 
+
+ </head> 
+ <body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar__logo--box">
+                <img src="/client/css/images/logo.png" alt="logo" class="navbar__logo">
+            </div>
+            <div class="navbar__mode--box">
+                <a href="#" class="navbar__mode--link">
+                    <i class="fa fa-moon-o" aria-hidden="true"></i> Dark Mode
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="form__box">
+            <div class="form__search--box">
+                <i class="fa fa-search form__icon" aria-hidden="true"></i>
+                <input type="text" class="form__input" id="form__search" placeholder="Search for a country...">
+                <label for="form__seacrh"></label>
+             </div>
+<!-- Drop down -->
+             <div class="form__dropdown--box ">
+                <button class="form__dropdown--btn">Filter By Region
+                    <span><i class="fa fa-chevron-down dropdown__icon" aria-hidden="true"></i></span>
+                </button>
+                <div class="form__dropdown--content hide">
+                  <a href="#" class=" form__dropdown--link  africa">Africa</a>
+                  <a href="#" class=" form__dropdown--link  europe">Europe</a>
+                  <a href="#" class=" form__dropdown--link  americas">Americas</a>
+                  <a href="#" class=" form__dropdown--link  polar">Polar</a>
+                  <!-- <a href="#" class=" form__dropdown--link  s-america">South America</a> -->
+                  <!-- <a href="#" class=" form__dropdown--link  caribbean">Caribbean</a> -->
+                  <a href="#" class=" form__dropdown--link  asia">Asia</a>
+                  <a href="#" class=" form__dropdown--link  oceania">Oceania</a>
+                </div>
+             </div>
+        </div>
+        <section class="country__section">
+            <div class="country__holder">
+
+            </div>
+            <div class="country__details hide">
+                <button class="country__back--btn"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+                <div class="country__details--holder">
+                    <div class="details--imagebox">
+                        <img src="" alt="flag-image" class="details--image">
+                    </div>
+                    <div class="details--text">
+                        <h2 class="country__heading detail__header"></h2>
+
+                        <ul class="first--list">
+                            <li class="first--item country__paragraph">Native Name: <span class="first--item1"></span> </li>
+                            <li class="first--item country__paragraph">Population: <span class="first--item2"></span></li>
+                            <li class="first--item country__paragraph">Region: <span class="first--item3"></span></li>
+                            <li class="first--item country__paragraph">Area: <span class="first--item4"></span></li>
+                        </ul>
+
+                        
+                        <ul class="second--list">
+                            <li class="second--item country__paragraph">Capital: <span class="second--item1"></span> </li>
+                            <li class="second--item country__paragraph">Calling Code: <span class="second--item2"></span></li>
+                            <li class="second--item country__paragraph">Numeric Code: <span class="second--item3"></span></li>
+                            <li class="second--item country__paragraph">Subregion: <span class="second--item4"></span></li>
+                        </ul>
+
+                        <ul class="third--list">
+                            <li class="third--item country__paragraph">Currency:
+                                <span class="third--item-code"></span>
+                                <span class="third--item-name"></span> 
+                                <span class="third--item-symbol"></span> 
+                            </li>
+                            <li class="third--item country__paragraph">Latitude: 
+                                <span class="third--item-lat"></span> &emsp;  Longitude:
+                                <span class="third--item-long"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="/client/js/handlers.js"></script>
+    <script type="text/javascript" src="/client/js/app.js"></script>
+    
+ </body>
+</html>
+ 

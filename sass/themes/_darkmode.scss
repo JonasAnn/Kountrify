@@ -1,0 +1,38 @@
+// toogle display
+.hide{
+    display: none;
+}
+
+#hide{
+    display: none;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+
+.bg--dark{
+   background-color: $color-blue-dark; 
+   & .navbar,
+   & .form__input,
+   & .form__dropdown--btn,
+   & .form__dropdown--link:link, 
+   & .form__dropdown--link:visited,
+   & .country__box,
+   & .country__back--btn,
+   & .third--item span{
+       background-color: $color-blue-light;
+       color: $color-white;
+   }
+   & .form__icon,
+   & .details--text{
+    color: $color-white;
+   }
+  & .form__dropdown--link{
+    &:hover,
+    &:active{
+        background-color: $color-blue-hover;
+        border-left: 2px solid $color-white;
+    }
+  }
+
+}
