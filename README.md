@@ -1,13 +1,13 @@
 ## Kountrify
 
-Description:
-Web application showing a list of countries and details about them. You can learn quite a bit about any countries you'd like.
+### Description:
+> Web application showing a list of countries and details about them. You can learn quite a bit about any countries you'd like.
 
 ### Built With
-HTML
-Javascript
-CSS (SCSS)
-The Countries API
+- HTML
+- Javascript
+- CSS (SCSS)
+- The Countries API
 
 
 ### Author:
